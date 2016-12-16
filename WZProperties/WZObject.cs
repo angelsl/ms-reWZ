@@ -138,7 +138,7 @@ namespace reWZ.WZProperties {
         #region Nested type: ChildCollection
 
         private class ChildCollection : KeyedCollection<string, WZObject> {
-            internal ChildCollection() : base(null, 4) {}
+            internal ChildCollection() : base(StringComparer.OrdinalIgnoreCase, 4) {}
 
             protected override string GetKeyForItem(WZObject item) {
                 return item.Name;
